@@ -1,4 +1,4 @@
-const F = require('../../Fractal.js')
+const F = require('fractal-js')
 const R = require('ramda')
 const h = F.h
 

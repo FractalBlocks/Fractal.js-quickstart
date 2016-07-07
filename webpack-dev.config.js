@@ -2,7 +2,7 @@ let webpack = require('webpack')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
-let vendorModules = /(node_modules|bower_components)/
+let vendorModules = /(node_modules|bower_components|Fractal.js)/
 
 
 module.exports = {

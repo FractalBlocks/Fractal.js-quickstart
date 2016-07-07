@@ -1,5 +1,5 @@
 require('../styles.css')
-const F = require('../../Fractal.js')
+const F = require('fractal-js')
 
 let engine = F.run({
   root: F.log(require('./main')), // F.log is for debugging
