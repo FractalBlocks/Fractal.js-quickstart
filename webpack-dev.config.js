@@ -12,7 +12,7 @@ module.exports = {
   },
 
   output: {
-    path: "./dist/",
+    path: "./public",
     filename: "app.js",
     pathinfo: true,
     publicPath: "",
@@ -61,7 +61,6 @@ module.exports = {
   profile: false,
 
   devServer: {
-    contentBase: "./public",
     port: 3000,
 
     hot: true,

@@ -1,5 +1,6 @@
 let webpack = require('webpack')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
+let CopyWebpackPlugin = require('copy-webpack-plugin')
 
 
 let vendorModules = /(node_modules|bower_components)/
@@ -19,7 +20,6 @@ module.exports = {
     path: './dist',
     filename: "app.js",
     pathinfo: true,
-    publicPath: "",
   },
 
   module: {
@@ -31,9 +31,7 @@ module.exports = {
       },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
-      { test: /\.jpg$/, loader: "url-loader?mimetype=image/jpg" },
-      { test: /\.bmp$/, loader: "url-loader?mimetype=image/bmp" },
-      { test: /\.png$/, loader: "url-loader?mimetype=image/png" },
+      { test: /\.(jpg|jpeg|gif|png)$/, loader:'url-loader?limit=100000' },
       { test: /\.scss$/, loaders: ["style", "css", "sass"] },
     ],
   },
@@ -60,6 +58,7 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CleanPlugin(['./dist']),
+    new CopyWebpackPlugin([{ from: 'assets', to: 'assets' }]),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
