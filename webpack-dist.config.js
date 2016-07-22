@@ -20,6 +20,7 @@ module.exports = {
     path: './dist',
     filename: "app.js",
     pathinfo: true,
+    publicPath: "",
   },
 
   module: {
