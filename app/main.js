@@ -17,14 +17,15 @@ module.exports = F.def({
     view: (ctx, i, m) => h('div', [
       h('div', {
         style: {
-          backgroundColor: (m.toggleState) ? 'purple' : 'green',
-          width: '100px',
-          height: '100px',
+          backgroundColor: (m.toggleState)? 'purple' : 'green',
+          width:'100px',
+          height:'100px',
+          color:'white',
         },
         on: {
           click: i.toggle,
         },
-      }),
+      },'Click me for change color!!'),
     ]),
   },
 })
