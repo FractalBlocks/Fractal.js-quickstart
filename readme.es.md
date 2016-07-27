@@ -4,9 +4,9 @@ Este es el punto de partida recomendado para cualquier aplicación basada en fra
 
 - Descarge el repositorio
 - Abra la shell del sistema dentro de la carpeta del proyecto
-- Ingrese `npm i` en la ventada de comandos para instalar las dependencias
-- Para iniciar la aplicación tipee `npm start`
-- La aplicación correo en la dirección `http://localhost:3000` del navegador
+- Para instalar las dependencias `npm i`
+- Para iniciar la aplicación `npm start`
+- La aplicación corre en `http://localhost:3000`
 
 Estamos desarrollando un tutorial completo...
 
