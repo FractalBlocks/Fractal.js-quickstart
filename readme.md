@@ -9,6 +9,7 @@ This is the recomended starting point for any fractal based app. Follow the next
 - Run a browser and navigate to `http://localhost:3000`
 
 Start hacking ... We are developing a full tutorial, comming soon ...
+[Spanish version readme](https://github.com/fractalPlatform/Fractal.js-quickstart/blob/master/readme.es.md)
 
 ## Building
 

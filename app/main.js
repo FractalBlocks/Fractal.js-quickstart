@@ -23,7 +23,7 @@ module.exports = F.def({
         on: {
           click: i.toggle,
         },
-      }),
+      },'Click me for change color!!'),
     ]),
   },
 })
