@@ -1,5 +1,3 @@
-'use strict'
-
 let webpack = require('webpack')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -40,20 +38,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin("init.js"),
     new HtmlWebpackPlugin({
       title: 'App',
-      minify: process.env.NODE_ENV === 'production' ? {
-        removeComments: true,
-        removeCommentsFromCDATA: true,
-        collapseWhitespace: true,
-        conservativeCollapse: false,
-        collapseBooleanAttributes: true,
-        removeAttributeQuotes: true,
-        removeRedundantAttributes: true,
-        preventAttributesEscaping: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-      } : false,
+      minify: false,
       template: './index.html',
     }),
     new webpack.HotModuleReplacementPlugin()
@@ -63,6 +48,7 @@ module.exports = {
   profile: false,
 
   devServer: {
+    contentBase: "./public",
     port: 3000,
 
     hot: true,
