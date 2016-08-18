@@ -1,5 +1,3 @@
-'use strict'
-
 let webpack = require('webpack')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 let CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -9,7 +7,6 @@ let vendorModules = /(node_modules|bower_components)/
 
 let CompressionPlugin = require('compression-webpack-plugin')
 let CleanPlugin = require('clean-webpack-plugin')
-
 
 
 module.exports = {
@@ -34,7 +31,9 @@ module.exports = {
       },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
-      { test: /\.(jpg|jpeg|gif|png)$/, loader:'url-loader?limit=100000' },
+      { test: /\.jpg$/, loader: "url-loader?mimetype=image/jpg" },
+      { test: /\.bmp$/, loader: "url-loader?mimetype=image/bmp" },
+      { test: /\.png$/, loader: "url-loader?mimetype=image/png" },
       { test: /\.scss$/, loaders: ["style", "css", "sass"] },
     ],
   },
@@ -71,13 +70,15 @@ module.exports = {
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.UglifyJsPlugin({
+    process.env.NODE_ENV === 'production' ? new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
       },
       mangle: false,
       comments: /\@license|\@preserv/gi,
-    }),
+    }) : function(source) {
+      return source
+    },
     new CompressionPlugin({
       asset: "{file}.gz",
       algorithm: "gzip",
