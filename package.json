@@ -38,7 +38,7 @@
     "webpack-merge": "^0.2.0"
   },
   "dependencies": {
-    "fractal-js": "0.0.13",
+    "fractal-js": "0.0.15",
     "ramda": "^0.18.0"
   }
 }
