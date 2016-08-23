@@ -1,6 +1,6 @@
 {
   "name": "fractal-js-quickstart",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A quickstart example for start using Fractal.js",
   "main": "index.js",
   "scripts": {

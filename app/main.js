@@ -28,7 +28,7 @@ module.exports = F.def({
   },
 })
 
-let styles = F.css.rs({
+let styles = F.style.rs({
   base: {},
   button: {
     base: {
