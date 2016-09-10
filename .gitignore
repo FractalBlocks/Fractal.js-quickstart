@@ -1,3 +1,5 @@
+# There are files you don't want Git to check in to GitHub. There are a few ways to tell Git which files to ignore.
+
 # Project specific stuff
 webpack-stats.json
 dist/
