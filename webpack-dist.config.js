@@ -27,7 +27,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: vendorModules,
-        loader: "babel",
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'es2017'],
+          plugins: [
+            'transform-runtime',
+            'transform-es2015-destructuring',
+            'transform-object-rest-spread',
+            'transform-async-to-generator'
+          ],
+        },
       },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },

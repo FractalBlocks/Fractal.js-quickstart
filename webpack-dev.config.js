@@ -2,7 +2,7 @@ let webpack = require('webpack')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
-let vendorModules = /(node_modules|bower_components|Fractal.js)/
+let vendorModules = /(node_modules|bower_components)/
 
 
 module.exports = {
@@ -21,16 +21,24 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /.js/,
         exclude: vendorModules,
-        loader: "babel",
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'es2017'],
+          plugins: [
+            'transform-runtime',
+            'transform-es2015-destructuring',
+            'transform-object-rest-spread',
+            'transform-async-to-generator'
+          ],
+        },
       },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
       { test: /\.jpg$/, loader: "url-loader?mimetype=image/jpg" },
       { test: /\.bmp$/, loader: "url-loader?mimetype=image/bmp" },
       { test: /\.png$/, loader: "url-loader?mimetype=image/png" },
-      { test: /\.scss$/, loaders: ["style", "css", "sass"] },
     ],
   },
 
@@ -44,7 +52,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   debug: true,
-  devtool: "cheap-module-inline-source-map",
+  devtool: 'source-map',
   profile: false,
 
   devServer: {

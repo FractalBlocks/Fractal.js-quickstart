@@ -2,6 +2,7 @@ const F = require('fractal-js')
 const R = require('ramda')
 const h = F.h
 
+
 module.exports = F.def({
   init: ({key}) => ({
     key,
