@@ -1,15 +1,14 @@
-require('../styles.css')
+require('./styles.css')
 const F = require('fractal-js')
+
 
 let engine = F.run({
   root: F.log(require('./main')), // F.log is for debugging
-  tasks: {
-    // task handlers like fetch or socketio here
-  },
   drivers: {
     view: F.drivers.view('#app'),
   },
 })
+
 
 // If hot module replacement is enabled
 if (module.hot) {

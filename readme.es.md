@@ -10,6 +10,8 @@ Este es el punto de partida recomendado para cualquier aplicación basada en fra
 
 Estamos desarrollando un tutorial completo...
 
+(TODO: Translate english version and update this one)
+
 ## Building
 
 Para obtener una versión de producción hay que ejecutar : `npm run compile`, los archivos compilados se crean en la carpeta `dist/`
