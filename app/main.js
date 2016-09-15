@@ -1,16 +1,15 @@
-const F = require('fractal-js')
-const R = require('ramda')
+import F from 'fractal-js'
+import R from 'ramda'
 const h = F.h
 
 
-module.exports = F.def({
+export default F.def({
+  name: 'Main',
   init: ({key}) => ({
     key,
     isActive: false,
   }),
-  inputs: {
-    toggle: (ctx, Action, _) => Action.Toggle(),
-  },
+  inputs: {},
   actions: {
     Toggle: [[], m => R.evolve({isActive: R.not}, m)],
   },
@@ -22,7 +21,7 @@ module.exports = F.def({
           [styles.button.active]: m.isActive,
         },
         on: {
-          click: i.toggle,
+          click: i._action('Toggle'),
         },
       }, (m.isActive) ? 'nice!! :)' : 'Click me!!'),
     ]),
