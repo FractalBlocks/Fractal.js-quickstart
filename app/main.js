@@ -23,7 +23,7 @@ let moduleDef = F.def({
         on: {
           click: i._action('Toggle'),
         },
-      }, (m.isActive) ? 'nice!! :)' : 'Click me5!!'),
+      }, (m.isActive) ? 'nice!! :)' : 'Click me!!'),
     ]),
   },
   styles: {
@@ -41,8 +41,9 @@ let moduleDef = F.def({
         backgroundColor: '#13A513',
         textAlign: 'center',
         transition: 'transform 0.4s',
-        // '-webkit-backface-visibility': 'hidden',
+        cursor: 'pointer',
         ...F.style.absoluteCenter,
+        ...F.style.noSelectable,
         '&:hover': {
           color: 'white',
           backgroundColor: 'purple',
