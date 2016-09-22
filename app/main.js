@@ -28,6 +28,7 @@ let moduleDef = F.def({
   },
   styles: {
     base: {
+      overflow: 'auto',
       ...F.style.absoluteCenter,
     },
     button: {
