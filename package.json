@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
-    "fractal-js": "^0.3.0-beta.2",
+    "fractal-js": "^0.3.1-beta.1",
     "ramda": "^0.18.0"
   }
 }

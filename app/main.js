@@ -28,6 +28,8 @@ let moduleDef = F.def({
   },
   styles: {
     base: {
+      width: '100%',
+      height: '100%',
       overflow: 'auto',
       ...F.style.absoluteCenter,
     },
