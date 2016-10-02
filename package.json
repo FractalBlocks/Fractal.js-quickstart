@@ -4,9 +4,9 @@
   "description": "A quickstart example for start using Fractal.js",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=development&& webpack-dev-server --config webpack-dev.config.js --progress",
-    "compile-dev": "set NODE_ENV=development&& webpack --config webpack-dist.config.js --progress",
-    "compile": "set NODE_ENV=production&& webpack --config webpack-dist.config.js --progress"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack-dev.config.js --progress",
+    "compile-dev": "cross-env NODE_ENV=development webpack --config webpack-dist.config.js --progress",
+    "compile": "cross-env NODE_ENV=production webpack --config webpack-dist.config.js --progress"
   },
   "author": "Carlos Galarza <carloslfu@gmail.com>",
   "repository": {
@@ -28,6 +28,7 @@
     "clean-webpack-plugin": "^0.1.3",
     "compression-webpack-plugin": "^0.2.0",
     "copy-webpack-plugin": "^3.0.1",
+    "cross-env": "^3.0.0",
     "css-loader": "^0.19.0",
     "file-loader": "^0.8.4",
     "html-webpack-plugin": "^1.6.1",

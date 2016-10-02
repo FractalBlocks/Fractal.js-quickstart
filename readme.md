@@ -24,9 +24,9 @@ For a production version run: `npm run compile`, and see the result in the `dist
 
 What are missing for this repo:
 
-- Include imports-loader as a dependency
-- Improve the quickstart.
-- Reference tutorials whe done.
+- Make a Fractal favicon
+- Put fractal favicon by default
+- Include imports-loader as a dependency (EVALUATE)
 
 ## Ideas
 
