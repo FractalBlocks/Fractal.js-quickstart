@@ -23,7 +23,7 @@ let moduleDef = F.def({
         on: {
           click: i._action('Toggle'),
         },
-      }, (m.isActive) ? 'nice!! :)' : 'Click me!!'),
+      }, (m.isActive) ? 'nice!! :\')' : 'Click me!!'),
     ]),
   },
   styles: {
